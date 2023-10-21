@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            width: 800px;
+            /* 降低容器宽度以适应屏幕 */
+            padding: 20px;
+            /* 调整内边距 */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #ccc;
+            /* 修复阴影样式 */
+            text-align: center;
+            /* 居中文本 */
+        }
+
+        .login-container label {
+            width: 100px;
+            display: inline-block;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        .input-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            /* 调整垂直间距 */
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            /* 填充整个容器宽度 */
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        input[type="submit"],
+        .register-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .register-button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>用户注册</h2>
+        <form action="/register/confirm" method="post">
+            <div class="input-container">
+                <label for="username">用户名:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-container">
+                <label for="password">密码:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-container">
+                <label for="repassword">确认密码:</label>
+                <input type="password" id="repassword" name="repassword" required>
+            </div>
+            <input type="submit" value="注册">
+        </form>
+    </div>
+</body>
+
+</html>
